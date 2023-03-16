@@ -47,6 +47,11 @@ function userNumber(){
     const numberChoice = parseInt(numberIn.value);
     console.log (numberChoice);
 
+    if(numberChoice > 5) {
+        alert('Il numero deve essere uguale o minore di 5');
+        return;
+    }
+
     let numberBot = getRndNumber(1, 5);
     console.log(numberBot);
 
