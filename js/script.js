@@ -10,6 +10,8 @@ let wordIn = document.getElementById('word-in');
 console.dir(wordIn);
 let btnVerify = document.getElementById('verify');
 console.dir(btnVerify);
+let printResult = document.querySelector('.result-word');
+
 
 btnVerify.addEventListener('click', function() {
     let wordUser = wordIn.value.toLowerCase().replace(/[\W_]/g, '');
@@ -17,7 +19,15 @@ btnVerify.addEventListener('click', function() {
 
     let reverse = wordUser.split('').reverse().join('');
     console.log(reverse);
-})
+
+    if (wordUser === reverse) {
+        printResult.innerHTML = `<h1 class="text-center">La parola che hai inserito è Palindroma</h1>`
+    }
+
+    else {
+        printResult.innerHTML = `<h1 class="text-center">La parola che hai inserito NON è Palindroma</h1>`
+    }
+});
 
 
 
