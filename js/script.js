@@ -6,9 +6,15 @@
 
 // MYSCRIPT
 
+let wordIn = document.getElementById('word-in');
+console.dir(wordIn);
+let btnVerify = document.getElementById('verify');
+console.dir(btnVerify);
 
-
-
+btnVerify.addEventListener('click', function() {
+    let wordUser = wordIn.value.toLowerCase().replace(/[\W_]/g, '');
+    console.log(wordUser);
+})
 
 
 
