@@ -14,6 +14,9 @@ console.dir(btnVerify);
 btnVerify.addEventListener('click', function() {
     let wordUser = wordIn.value.toLowerCase().replace(/[\W_]/g, '');
     console.log(wordUser);
+
+    let reverse = wordUser.split('').reverse().join('');
+    console.log(reverse);
 })
 
 
