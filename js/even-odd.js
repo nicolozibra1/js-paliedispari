@@ -17,6 +17,9 @@ console.dir(numberIn);
 const btnSend = document.querySelector('.btn');
 console.dir(btnSend);
 
+let result = document.querySelector('.print-result')
+console.dir(result);
+
 let a = true;
 console.log(a);
 let b = false;
@@ -51,15 +54,34 @@ function userNumber(){
     console.log(numberResult);
 
     if (numberResult % 2 === 0 && a == true) {
+        result.innerHTML = `<h3>Il numero che hai scelto è: ${numberChoice}</h3>
+                            <h3>Il numero generato dal BOT è: ${numberBot}</h3>
+                            <h3>La somma dei due numeri è: ${numberResult}</h3>
+                            <h1>Hai vinto!</h1>`
         console.log('Hai vinto con il pari');
     }
     else if (numberResult % 2 !== 0 && b == true){
+        result.innerHTML = `<h3>Il numero che hai scelto è: ${numberChoice}</h3>
+                            <h3>Il numero generato dal BOT è: ${numberBot}</h3>
+                            <h3>La somma dei due numeri è: ${numberResult}</h3>
+                            <h1>Hai vinto!</h1>`
         console.log('hai vinto con il dispari');
     }
     else if (numberResult % 2 === 0 && a == false){
+        result.innerHTML = `<h3>Il numero che hai scelto è: ${numberChoice}</h3>
+                            <h3>Il numero generato dal BOT è: ${numberBot}</h3>
+                            <h3>La somma dei due numeri è: ${numberResult}</h3>
+                            <h1>Hai perso!</h1>`
         console.log('hai perso');
     }
     else if(numberResult % 2 !== 0 && b == false){
+        result.innerHTML = `<h3>Il numero che hai scelto è: ${numberChoice}</h3>
+                            <h3>Il numero generato dal BOT è: ${numberBot}</h3>
+                            <h3>La somma dei due numeri è: ${numberResult}</h3>
+                            <h1>Hai perso!</h1>`
         console.log('hai perso');
     }
+
+    result.classList.toggle('d-none');
 }
+
