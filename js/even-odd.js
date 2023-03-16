@@ -9,11 +9,23 @@
 // MYSCRIPT
 
 const select = document.getElementById('even-odd');
-console.dir(userSelect);
+console.dir(select);
+
+const numberIn = document.querySelector('.choose-number');
+console.dir(numberIn);
+
+const btnSend = document.querySelector('.btn');
+console.dir(btnSend);
 
 select.addEventListener('change', userSelect);
-
 function userSelect(){
     const userChoice = select.value;
     console.log (userChoice);
+
+}
+
+btnSend.addEventListener('click', userNumber);
+function userNumber(){
+    const numberChoice = numberIn.value;
+    console.log (numberChoice);
 }
